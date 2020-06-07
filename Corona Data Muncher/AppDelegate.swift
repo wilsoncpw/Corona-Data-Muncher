@@ -8,19 +8,37 @@
 
 import Cocoa
 
+
+enum DateError: Error {
+    case invalidDate
+}
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-
-
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+    
+    var mainViewController: MainViewController? {
+        didSet {
+            loadData()
+        }
+    }
+    
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
     }
 
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+    private func loadData () {
+        StatusBarNotify (message: "Loading data...").post()
+        let downloader = PHEDataDownloader ()
+        downloader.loadDataIntoController { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .failure(let error) : StatusBarNotify (message: error.localizedDescription).post()
+                case .success(let dataController) :
+                    StatusBarNotify (message: "").post ()
+                    self.mainViewController?.dataController = dataController
+                }
+            }
+        }
     }
-
-
 }
 

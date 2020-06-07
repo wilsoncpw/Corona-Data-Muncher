@@ -8,19 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		266E56C9248AB45E00E239D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E56C8248AB45E00E239D8 /* AppDelegate.swift */; };
-		266E56CB248AB45E00E239D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E56CA248AB45E00E239D8 /* ViewController.swift */; };
+		266E56CB248AB45E00E239D8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E56CA248AB45E00E239D8 /* MainViewController.swift */; };
 		266E56CD248AB45F00E239D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 266E56CC248AB45F00E239D8 /* Assets.xcassets */; };
 		266E56D0248AB45F00E239D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 266E56CE248AB45F00E239D8 /* Main.storyboard */; };
+		266E56DA248AB8DD00E239D8 /* Cases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E56D9248AB8DD00E239D8 /* Cases.swift */; };
+		266E56DC248AB8F900E239D8 /* Deaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E56DB248AB8F900E239D8 /* Deaths.swift */; };
+		266E56DE248AC20400E239D8 /* CWISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E56DD248AC20400E239D8 /* CWISO8601DateFormatter.swift */; };
+		266E56E0248AFD5100E239D8 /* PHEDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E56DF248AFD5100E239D8 /* PHEDataDownloader.swift */; };
+		266E56E2248B021800E239D8 /* JSONDecoderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E56E1248B021800E239D8 /* JSONDecoderExtensions.swift */; };
+		266E56EB248B06C200E239D8 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E56EA248B06C200E239D8 /* Notifications.swift */; };
+		266E56ED248B080700E239D8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E56EC248B080700E239D8 /* DataController.swift */; };
+		268A2906248C703500E51EFC /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A2905248C703500E51EFC /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		266E56C5248AB45D00E239D8 /* Corona Data Muncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Corona Data Muncher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		266E56C8248AB45E00E239D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		266E56CA248AB45E00E239D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		266E56CA248AB45E00E239D8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		266E56CC248AB45F00E239D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		266E56CF248AB45F00E239D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		266E56D1248AB45F00E239D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		266E56D2248AB45F00E239D8 /* Corona_Data_Muncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Corona_Data_Muncher.entitlements; sourceTree = "<group>"; };
+		266E56D9248AB8DD00E239D8 /* Cases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cases.swift; sourceTree = "<group>"; };
+		266E56DB248AB8F900E239D8 /* Deaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deaths.swift; sourceTree = "<group>"; };
+		266E56DD248AC20400E239D8 /* CWISO8601DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWISO8601DateFormatter.swift; sourceTree = "<group>"; };
+		266E56DF248AFD5100E239D8 /* PHEDataDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHEDataDownloader.swift; sourceTree = "<group>"; };
+		266E56E1248B021800E239D8 /* JSONDecoderExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderExtensions.swift; sourceTree = "<group>"; };
+		266E56EA248B06C200E239D8 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		266E56EC248B080700E239D8 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		268A2905248C703500E51EFC /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,14 +69,70 @@
 		266E56C7248AB45D00E239D8 /* Corona Data Muncher */ = {
 			isa = PBXGroup;
 			children = (
+				266E56E5248B05EC00E239D8 /* Extensions */,
+				266E56D8248AB7F300E239D8 /* Model */,
+				266E56E3248B05D200E239D8 /* Model Controllers */,
+				266E56E6248B05F800E239D8 /* UI Controllers */,
+				266E56E8248B060E00E239D8 /* Views */,
+				266E56E9248B061700E239D8 /* UI Elements */,
 				266E56C8248AB45E00E239D8 /* AppDelegate.swift */,
-				266E56CA248AB45E00E239D8 /* ViewController.swift */,
-				266E56CC248AB45F00E239D8 /* Assets.xcassets */,
-				266E56CE248AB45F00E239D8 /* Main.storyboard */,
 				266E56D1248AB45F00E239D8 /* Info.plist */,
 				266E56D2248AB45F00E239D8 /* Corona_Data_Muncher.entitlements */,
 			);
 			path = "Corona Data Muncher";
+			sourceTree = "<group>";
+		};
+		266E56D8248AB7F300E239D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				266E56D9248AB8DD00E239D8 /* Cases.swift */,
+				266E56DB248AB8F900E239D8 /* Deaths.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		266E56E3248B05D200E239D8 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				266E56DD248AC20400E239D8 /* CWISO8601DateFormatter.swift */,
+				266E56DF248AFD5100E239D8 /* PHEDataDownloader.swift */,
+				266E56EC248B080700E239D8 /* DataController.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		266E56E5248B05EC00E239D8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				266E56E1248B021800E239D8 /* JSONDecoderExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		266E56E6248B05F800E239D8 /* UI Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				266E56CA248AB45E00E239D8 /* MainViewController.swift */,
+				266E56EA248B06C200E239D8 /* Notifications.swift */,
+			);
+			path = "UI Controllers";
+			sourceTree = "<group>";
+		};
+		266E56E8248B060E00E239D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				268A2905248C703500E51EFC /* HeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		266E56E9248B061700E239D8 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				266E56CE248AB45F00E239D8 /* Main.storyboard */,
+				266E56CC248AB45F00E239D8 /* Assets.xcassets */,
+			);
+			path = "UI Elements";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,7 +205,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				266E56CB248AB45E00E239D8 /* ViewController.swift in Sources */,
+				266E56EB248B06C200E239D8 /* Notifications.swift in Sources */,
+				266E56E0248AFD5100E239D8 /* PHEDataDownloader.swift in Sources */,
+				266E56DE248AC20400E239D8 /* CWISO8601DateFormatter.swift in Sources */,
+				266E56DC248AB8F900E239D8 /* Deaths.swift in Sources */,
+				266E56ED248B080700E239D8 /* DataController.swift in Sources */,
+				268A2906248C703500E51EFC /* HeaderView.swift in Sources */,
+				266E56DA248AB8DD00E239D8 /* Cases.swift in Sources */,
+				266E56CB248AB45E00E239D8 /* MainViewController.swift in Sources */,
+				266E56E2248B021800E239D8 /* JSONDecoderExtensions.swift in Sources */,
 				266E56C9248AB45E00E239D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
