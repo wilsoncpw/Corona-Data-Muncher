@@ -15,11 +15,14 @@ enum CWISO8601DateError: Error {
 
 class CWISO8601DateFormatter {
     
-    func string (from: Date) -> String {
+    static var lastDate: Date?
+    static var lastDateStr = ""
+    
+    static func string (from: Date) -> String {
         return ISO8601DateFormatter ().string(from: from)
     }
     
-    private func decodeISODate (dateStr: Substring, year: inout Int, month: inout Int, day: inout Int, week: inout Int?) throws {
+    private static func decodeISODate (dateStr: Substring, year: inout Int, month: inout Int, day: inout Int, week: inout Int?) throws {
         
         let dt = dateStr.replacingOccurrences(of: "-", with: "").uppercased()
         
@@ -97,7 +100,7 @@ class CWISO8601DateFormatter {
         
     }
     
-    private func decodeISOTime (timeStr: Substring, hour: inout Int, minutes: inout Int, seconds: inout Int, ms: inout Int?, zoneOffset: inout Int?) throws {
+    private static func decodeISOTime (timeStr: Substring, hour: inout Int, minutes: inout Int, seconds: inout Int, ms: inout Int?, zoneOffset: inout Int?) throws {
         
         var tm = timeStr.replacingOccurrences(of: ":", with: "").uppercased()
         if tm.suffix(1) == "Z" {
@@ -189,7 +192,10 @@ class CWISO8601DateFormatter {
         }
     }
     
-    func date (from: String)-> Date? {
+    static func date (from: String)-> Date? {
+        if from == lastDateStr{
+            return lastDate
+        }
         
         let elements = from.split(separator: "T", maxSplits: 1, omittingEmptySubsequences: false)
         
@@ -246,8 +252,10 @@ class CWISO8601DateFormatter {
             
             components.calendar = Calendar (identifier: .gregorian)
             
+            lastDateStr = from
+            lastDate = components.date
             
-            return components.date
+            return lastDate
         } catch {
             return nil
         }

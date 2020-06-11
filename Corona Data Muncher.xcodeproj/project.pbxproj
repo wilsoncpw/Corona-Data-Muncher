@@ -18,7 +18,9 @@
 		266E56E2248B021800E239D8 /* JSONDecoderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E56E1248B021800E239D8 /* JSONDecoderExtensions.swift */; };
 		266E56EB248B06C200E239D8 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E56EA248B06C200E239D8 /* Notifications.swift */; };
 		266E56ED248B080700E239D8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E56EC248B080700E239D8 /* DataController.swift */; };
+		26757EF2248F0317006F72B7 /* BarGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26757EF1248F0317006F72B7 /* BarGraphView.swift */; };
 		268A2906248C703500E51EFC /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A2905248C703500E51EFC /* HeaderView.swift */; };
+		26B03250248DA56F00B8E965 /* DeathsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B0324F248DA56F00B8E965 /* DeathsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +38,9 @@
 		266E56E1248B021800E239D8 /* JSONDecoderExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderExtensions.swift; sourceTree = "<group>"; };
 		266E56EA248B06C200E239D8 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		266E56EC248B080700E239D8 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		26757EF1248F0317006F72B7 /* BarGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraphView.swift; sourceTree = "<group>"; };
 		268A2905248C703500E51EFC /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		26B0324F248DA56F00B8E965 /* DeathsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 			children = (
 				266E56CA248AB45E00E239D8 /* MainViewController.swift */,
 				266E56EA248B06C200E239D8 /* Notifications.swift */,
+				26B0324F248DA56F00B8E965 /* DeathsViewController.swift */,
 			);
 			path = "UI Controllers";
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				268A2905248C703500E51EFC /* HeaderView.swift */,
+				26757EF1248F0317006F72B7 /* BarGraphView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,9 +214,11 @@
 				266E56EB248B06C200E239D8 /* Notifications.swift in Sources */,
 				266E56E0248AFD5100E239D8 /* PHEDataDownloader.swift in Sources */,
 				266E56DE248AC20400E239D8 /* CWISO8601DateFormatter.swift in Sources */,
+				26757EF2248F0317006F72B7 /* BarGraphView.swift in Sources */,
 				266E56DC248AB8F900E239D8 /* Deaths.swift in Sources */,
 				266E56ED248B080700E239D8 /* DataController.swift in Sources */,
 				268A2906248C703500E51EFC /* HeaderView.swift in Sources */,
+				26B03250248DA56F00B8E965 /* DeathsViewController.swift in Sources */,
 				266E56DA248AB8DD00E239D8 /* Cases.swift in Sources */,
 				266E56CB248AB45E00E239D8 /* MainViewController.swift in Sources */,
 				266E56E2248B021800E239D8 /* JSONDecoderExtensions.swift in Sources */,
@@ -350,6 +358,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Corona Data Muncher/Corona_Data_Muncher.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3R8CQY2XDV;
@@ -370,6 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Corona Data Muncher/Corona_Data_Muncher.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3R8CQY2XDV;

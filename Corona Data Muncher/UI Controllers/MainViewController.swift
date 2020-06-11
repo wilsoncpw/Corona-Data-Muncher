@@ -15,6 +15,8 @@ class MainViewController: NSViewController {
     @IBOutlet weak var deathsLabel: NSTextField!
     @IBOutlet weak var casesLabel: NSTextField!
     
+    var deathsViewController: DeathsViewController?
+    
     var dataController: DataController? {
         didSet {
             guard let data = dataController else {
@@ -27,7 +29,7 @@ class MainViewController: NSViewController {
             dateLabel.stringValue = DateFormatter.localizedString(from: data.deaths.metadata.lastUpdatedAt, dateStyle: .full, timeStyle: .full)
             deathsLabel.stringValue = "\(data.deaths.overview [0].dailyChangeInDeaths!) new deaths"
             casesLabel.stringValue = "\(data.cases.dailyRecords.dailyLabConfirmedCases) new cases"
-            
+            deathsViewController?.dataController = dataController
         }
     }
 

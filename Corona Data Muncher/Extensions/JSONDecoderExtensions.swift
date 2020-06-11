@@ -14,7 +14,7 @@ extension JSONDecoder {
         rv.dateDecodingStrategy = .custom { decoder in
             let container = try decoder.singleValueContainer()
             let dateStr = try container.decode(String.self)
-            if let date = CWISO8601DateFormatter ().date(from: dateStr) {
+            if let date = CWISO8601DateFormatter.date(from: dateStr) {
                 return date
             }
             
