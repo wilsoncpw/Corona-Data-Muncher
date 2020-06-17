@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cCY-vP-Kaq">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main1 View Controller-->
+        <scene sceneID="23t-9k-FCO">
+            <objects>
+                <viewController id="cCY-vP-Kaq" customClass="Main1ViewController" customModule="Corona_Data_Muncher_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fqS-B1-JFo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid" translatesAutoresizingMaskIntoConstraints="NO" id="mOv-Kn-lVV">
+                                <rect key="frame" x="9" y="53" width="169.66666666666666" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="dfg-Z1-vFg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbP-9s-OKr">
+                                <rect key="frame" x="9" y="131" width="34.333333333333336" height="19.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tZy-59-Yse" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kbP-9s-OKr" secondAttribute="trailing" constant="20" id="HtW-e8-4OV"/>
+                            <constraint firstItem="kbP-9s-OKr" firstAttribute="leading" secondItem="mOv-Kn-lVV" secondAttribute="leading" id="Jdc-BW-4y2"/>
+                            <constraint firstItem="tZy-59-Yse" firstAttribute="centerX" secondItem="mOv-Kn-lVV" secondAttribute="trailing" constant="9" id="KZa-Ot-l7u"/>
+                            <constraint firstItem="mOv-Kn-lVV" firstAttribute="top" secondItem="tZy-59-Yse" secondAttribute="top" constant="9" id="Wb9-oh-G9D"/>
+                            <constraint firstItem="mOv-Kn-lVV" firstAttribute="leading" secondItem="tZy-59-Yse" secondAttribute="leading" constant="9" id="XH6-ss-Gaj"/>
+                            <constraint firstItem="kbP-9s-OKr" firstAttribute="firstBaseline" secondItem="mOv-Kn-lVV" secondAttribute="baseline" constant="24.333333333333332" symbolType="layoutAnchor" id="epc-ec-iJb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tZy-59-Yse"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="kbP-9s-OKr" id="8uY-NI-0dj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x7J-if-5gj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="137.4384236453202"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Covid" width="233.33332824707031" height="100"/>
+    </resources>
+</document>

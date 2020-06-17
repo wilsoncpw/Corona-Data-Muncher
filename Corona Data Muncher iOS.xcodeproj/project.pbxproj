@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		267E5DCC2498E770008E996A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267E5DCB2498E770008E996A /* AppDelegate.swift */; };
+		267E5DCE2498E770008E996A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267E5DCD2498E770008E996A /* SceneDelegate.swift */; };
+		267E5DD02498E770008E996A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267E5DCF2498E770008E996A /* ViewController.swift */; };
+		267E5DD32498E770008E996A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 267E5DD12498E770008E996A /* Main.storyboard */; };
+		267E5DD52498E771008E996A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267E5DD42498E771008E996A /* Assets.xcassets */; };
+		267E5DD82498E771008E996A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 267E5DD62498E771008E996A /* LaunchScreen.storyboard */; };
+		268C6BD5249A204F00265F02 /* Cases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C6BD3249A204F00265F02 /* Cases.swift */; };
+		268C6BD6249A204F00265F02 /* Deaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C6BD4249A204F00265F02 /* Deaths.swift */; };
+		268C6BD8249A209600265F02 /* JSONDecoderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C6BD7249A209600265F02 /* JSONDecoderExtensions.swift */; };
+		268C6BDA249A20D000265F02 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C6BD9249A20D000265F02 /* Notifications.swift */; };
+		268C6BDE249A20F600265F02 /* PHEDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C6BDB249A20F600265F02 /* PHEDataDownloader.swift */; };
+		268C6BDF249A20F600265F02 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C6BDC249A20F600265F02 /* DataController.swift */; };
+		268C6BE0249A20F600265F02 /* CWISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C6BDD249A20F600265F02 /* CWISO8601DateFormatter.swift */; };
+		268C6BE2249A234C00265F02 /* Main1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C6BE1249A234C00265F02 /* Main1ViewController.swift */; };
+		268C6BE4249A26B000265F02 /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C6BE3249A26B000265F02 /* UIApplicationExtensions.swift */; };
+		26FCA8512499896000C12FDE /* Main1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26FCA8502499896000C12FDE /* Main1.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		267E5DC82498E770008E996A /* Corona Data Muncher iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Corona Data Muncher iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		267E5DCB2498E770008E996A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		267E5DCD2498E770008E996A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		267E5DCF2498E770008E996A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		267E5DD22498E770008E996A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		267E5DD42498E771008E996A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		267E5DD72498E771008E996A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		267E5DD92498E771008E996A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		268C6BD3249A204F00265F02 /* Cases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cases.swift; path = "Corona Data Muncher/Model/Cases.swift"; sourceTree = SOURCE_ROOT; };
+		268C6BD4249A204F00265F02 /* Deaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Deaths.swift; path = "Corona Data Muncher/Model/Deaths.swift"; sourceTree = SOURCE_ROOT; };
+		268C6BD7249A209600265F02 /* JSONDecoderExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONDecoderExtensions.swift; path = "Corona Data Muncher/Extensions/JSONDecoderExtensions.swift"; sourceTree = SOURCE_ROOT; };
+		268C6BD9249A20D000265F02 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = "Corona Data Muncher/UI Controllers/Notifications.swift"; sourceTree = SOURCE_ROOT; };
+		268C6BDB249A20F600265F02 /* PHEDataDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PHEDataDownloader.swift; path = "Corona Data Muncher/Model Controllers/PHEDataDownloader.swift"; sourceTree = SOURCE_ROOT; };
+		268C6BDC249A20F600265F02 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataController.swift; path = "Corona Data Muncher/Model Controllers/DataController.swift"; sourceTree = SOURCE_ROOT; };
+		268C6BDD249A20F600265F02 /* CWISO8601DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CWISO8601DateFormatter.swift; path = "Corona Data Muncher/Model Controllers/CWISO8601DateFormatter.swift"; sourceTree = SOURCE_ROOT; };
+		268C6BE1249A234C00265F02 /* Main1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main1ViewController.swift; sourceTree = "<group>"; };
+		268C6BE3249A26B000265F02 /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
+		26FCA8502499896000C12FDE /* Main1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main1.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		267E5DC52498E770008E996A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		267E5DBF2498E770008E996A = {
+			isa = PBXGroup;
+			children = (
+				267E5DCA2498E770008E996A /* Corona Data Muncher iOS */,
+				267E5DC92498E770008E996A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		267E5DC92498E770008E996A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				267E5DC82498E770008E996A /* Corona Data Muncher iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		267E5DCA2498E770008E996A /* Corona Data Muncher iOS */ = {
+			isa = PBXGroup;
+			children = (
+				26C6CC12249A1912007D996C /* Extensions */,
+				26C6CC14249A192C007D996C /* Model */,
+				26C6CC17249A194A007D996C /* Model Controllers */,
+				26C6CC1B249A1975007D996C /* UI Controllers */,
+				268C6BCB249A1E3E00265F02 /* UI Elements */,
+				267E5DCB2498E770008E996A /* AppDelegate.swift */,
+				267E5DCD2498E770008E996A /* SceneDelegate.swift */,
+				267E5DD92498E771008E996A /* Info.plist */,
+			);
+			path = "Corona Data Muncher iOS";
+			sourceTree = "<group>";
+		};
+		268C6BCB249A1E3E00265F02 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				267E5DD12498E770008E996A /* Main.storyboard */,
+				26FCA8502499896000C12FDE /* Main1.storyboard */,
+				267E5DD62498E771008E996A /* LaunchScreen.storyboard */,
+				267E5DD42498E771008E996A /* Assets.xcassets */,
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
+		26C6CC12249A1912007D996C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				268C6BD7249A209600265F02 /* JSONDecoderExtensions.swift */,
+				268C6BE3249A26B000265F02 /* UIApplicationExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		26C6CC14249A192C007D996C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				268C6BD3249A204F00265F02 /* Cases.swift */,
+				268C6BD4249A204F00265F02 /* Deaths.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		26C6CC17249A194A007D996C /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				268C6BDD249A20F600265F02 /* CWISO8601DateFormatter.swift */,
+				268C6BDC249A20F600265F02 /* DataController.swift */,
+				268C6BDB249A20F600265F02 /* PHEDataDownloader.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		26C6CC1B249A1975007D996C /* UI Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				268C6BD9249A20D000265F02 /* Notifications.swift */,
+				267E5DCF2498E770008E996A /* ViewController.swift */,
+				268C6BE1249A234C00265F02 /* Main1ViewController.swift */,
+			);
+			path = "UI Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		267E5DC72498E770008E996A /* Corona Data Muncher iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 267E5DDC2498E771008E996A /* Build configuration list for PBXNativeTarget "Corona Data Muncher iOS" */;
+			buildPhases = (
+				267E5DC42498E770008E996A /* Sources */,
+				267E5DC52498E770008E996A /* Frameworks */,
+				267E5DC62498E770008E996A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Corona Data Muncher iOS";
+			productName = "Corona Data Muncher iOS";
+			productReference = 267E5DC82498E770008E996A /* Corona Data Muncher iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		267E5DC02498E770008E996A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Colin Wilson";
+				TargetAttributes = {
+					267E5DC72498E770008E996A = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 267E5DC32498E770008E996A /* Build configuration list for PBXProject "Corona Data Muncher iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 267E5DBF2498E770008E996A;
+			productRefGroup = 267E5DC92498E770008E996A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				267E5DC72498E770008E996A /* Corona Data Muncher iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		267E5DC62498E770008E996A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				267E5DD82498E771008E996A /* LaunchScreen.storyboard in Resources */,
+				26FCA8512499896000C12FDE /* Main1.storyboard in Resources */,
+				267E5DD52498E771008E996A /* Assets.xcassets in Resources */,
+				267E5DD32498E770008E996A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		267E5DC42498E770008E996A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				268C6BDE249A20F600265F02 /* PHEDataDownloader.swift in Sources */,
+				268C6BDA249A20D000265F02 /* Notifications.swift in Sources */,
+				267E5DD02498E770008E996A /* ViewController.swift in Sources */,
+				268C6BD6249A204F00265F02 /* Deaths.swift in Sources */,
+				268C6BE2249A234C00265F02 /* Main1ViewController.swift in Sources */,
+				268C6BDF249A20F600265F02 /* DataController.swift in Sources */,
+				268C6BE4249A26B000265F02 /* UIApplicationExtensions.swift in Sources */,
+				268C6BE0249A20F600265F02 /* CWISO8601DateFormatter.swift in Sources */,
+				268C6BD8249A209600265F02 /* JSONDecoderExtensions.swift in Sources */,
+				268C6BD5249A204F00265F02 /* Cases.swift in Sources */,
+				267E5DCC2498E770008E996A /* AppDelegate.swift in Sources */,
+				267E5DCE2498E770008E996A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		267E5DD12498E770008E996A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				267E5DD22498E770008E996A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		267E5DD62498E771008E996A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				267E5DD72498E771008E996A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		267E5DDA2498E771008E996A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		267E5DDB2498E771008E996A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		267E5DDD2498E771008E996A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3R8CQY2XDV;
+				INFOPLIST_FILE = "Corona Data Muncher iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.colinwilson.Corona-Data-Muncher-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		267E5DDE2498E771008E996A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3R8CQY2XDV;
+				INFOPLIST_FILE = "Corona Data Muncher iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.colinwilson.Corona-Data-Muncher-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		267E5DC32498E770008E996A /* Build configuration list for PBXProject "Corona Data Muncher iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				267E5DDA2498E771008E996A /* Debug */,
+				267E5DDB2498E771008E996A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		267E5DDC2498E771008E996A /* Build configuration list for PBXNativeTarget "Corona Data Muncher iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				267E5DDD2498E771008E996A /* Debug */,
+				267E5DDE2498E771008E996A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 267E5DC02498E770008E996A /* Project object */;
+}
