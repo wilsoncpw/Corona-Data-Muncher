@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum DateError: Error {
+    case invalidDate
+}
+
 extension JSONDecoder {
     static func createWithFixedISO8601DateDecoder () -> JSONDecoder {
         let rv = JSONDecoder.init()

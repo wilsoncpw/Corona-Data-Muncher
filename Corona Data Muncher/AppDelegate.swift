@@ -9,9 +9,7 @@
 import Cocoa
 
 
-enum DateError: Error {
-    case invalidDate
-}
+
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {

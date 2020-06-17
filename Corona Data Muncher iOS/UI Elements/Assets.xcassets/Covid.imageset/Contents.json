@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "Coronavirus_Latest-News.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Coronavirus_Latest-News-1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Coronavirus_Latest-News-2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
