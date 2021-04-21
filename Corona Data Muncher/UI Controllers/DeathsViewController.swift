@@ -50,7 +50,7 @@ class DeathsViewController: NSViewController {
 
 extension DeathsViewController: NSTableViewDataSource {
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return dataController?.deaths.overview.count ?? 0
+        return dataController?.data.rowCount ?? 0
     }
     
     func pad (_ st: String, _ len: Int) -> String {
@@ -62,20 +62,20 @@ extension DeathsViewController: NSTableViewDataSource {
     }
     
     func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
-        guard let columnId = tableColumn?.identifier.rawValue, let dataController = dataController else {
+        guard let columnId = tableColumn?.identifier.rawValue, let dataController = dataController, let dataInfo = dataController.data.getData(row) else {
             return "-"
         }
         
-        let info = dataController.deaths.overview [row]
+        let deathsInfo = dataInfo.deaths
         
         let formatter = DateFormatter ()
         
         formatter.dateStyle = .medium
         
         switch columnId {
-        case "date": return pad (formatter.string(from: info.reportingDate), 12)
-        case "total": if let total = info.cumulativeDeaths { return pad (String (total), 7)} else { return "      -" }
-        case "additional": if let additional = info.dailyChangeInDeaths { return pad (String (additional), 7)} else { return "      -"}
+        case "date": return pad (formatter.string(from: dataInfo.date), 12)
+        case "total": return pad (String (deathsInfo.cumulative ?? 0), 7)
+        case "additional": return pad (String (deathsInfo.daily ?? 0), 7)
         default: return "-"
         }
     }
@@ -91,18 +91,18 @@ extension DeathsViewController: NSTableViewDelegate {
         let rowIdx = table.selectedRow
         
         if rowIdx >= 0 {
-            let selectedOverview = dataController.deaths.overview [rowIdx]
-            
-            let countriesInfo = dataController.deaths.countries.filter {info in
-                return info.reportingDate == selectedOverview.reportingDate
-            }
-            
-            let countryColors = ["England":(color:NSColor.systemRed, pop:56.0), "Scotland": (color:NSColor.systemBrown, pop:5.45), "Wales": (color:NSColor.systemYellow, pop:3.13), "Northern Ireland": (color:NSColor.systemGreen, pop:1.88)]
-            
-            countriesBarGraph.bars = countriesInfo.map {info -> BarGraphBar in
-                let countryInfo = countryColors [info.areaName] ?? (color:NSColor.systemIndigo, pop:1.0)
-                return BarGraphBar (label: info.areaName, value: Double (info.dailyChangeInDeaths ?? 0), color: countryInfo.color, population: countryInfo.pop)
-            }
+//            let selectedOverview = dataController.deaths [rowIdx]
+//
+//            let countriesInfo = dataController.deaths.countries.filter {info in
+//                return info.reportingDate == selectedOverview.reportingDate
+//            }
+//
+//            let countryColors = ["England":(color:NSColor.systemRed, pop:56.0), "Scotland": (color:NSColor.systemBrown, pop:5.45), "Wales": (color:NSColor.systemYellow, pop:3.13), "Northern Ireland": (color:NSColor.systemGreen, pop:1.88)]
+//
+//            countriesBarGraph.bars = countriesInfo.map {info -> BarGraphBar in
+//                let countryInfo = countryColors [info.areaName] ?? (color:NSColor.systemIndigo, pop:1.0)
+//                return BarGraphBar (label: info.areaName, value: Double (info.dailyChangeInDeaths ?? 0), color: countryInfo.color, population: countryInfo.pop)
+//            }
         } else {
             countriesBarGraph.bars = nil
         }

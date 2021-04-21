@@ -11,16 +11,16 @@
 		266E56CB248AB45E00E239D8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E56CA248AB45E00E239D8 /* MainViewController.swift */; };
 		266E56CD248AB45F00E239D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 266E56CC248AB45F00E239D8 /* Assets.xcassets */; };
 		266E56D0248AB45F00E239D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 266E56CE248AB45F00E239D8 /* Main.storyboard */; };
-		266E56DA248AB8DD00E239D8 /* Cases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E56D9248AB8DD00E239D8 /* Cases.swift */; };
-		266E56DC248AB8F900E239D8 /* Deaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E56DB248AB8F900E239D8 /* Deaths.swift */; };
 		266E56DE248AC20400E239D8 /* CWISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E56DD248AC20400E239D8 /* CWISO8601DateFormatter.swift */; };
-		266E56E0248AFD5100E239D8 /* PHEDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E56DF248AFD5100E239D8 /* PHEDataDownloader.swift */; };
 		266E56E2248B021800E239D8 /* JSONDecoderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E56E1248B021800E239D8 /* JSONDecoderExtensions.swift */; };
 		266E56EB248B06C200E239D8 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E56EA248B06C200E239D8 /* Notifications.swift */; };
 		266E56ED248B080700E239D8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E56EC248B080700E239D8 /* DataController.swift */; };
 		26757EF2248F0317006F72B7 /* BarGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26757EF1248F0317006F72B7 /* BarGraphView.swift */; };
+		2678FBF824E4A88100341565 /* GovUKDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2678FBF724E4A88100341565 /* GovUKDataDownloader.swift */; };
+		2678FBFA24E4AD1F00341565 /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2678FBF924E4AD1F00341565 /* URLExtensions.swift */; };
 		268A2906248C703500E51EFC /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A2905248C703500E51EFC /* HeaderView.swift */; };
 		26B03250248DA56F00B8E965 /* DeathsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B0324F248DA56F00B8E965 /* DeathsViewController.swift */; };
+		26B721A624E603C900DE1C51 /* GovUKData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B721A524E603C900DE1C51 /* GovUKData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,16 +31,16 @@
 		266E56CF248AB45F00E239D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		266E56D1248AB45F00E239D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		266E56D2248AB45F00E239D8 /* Corona_Data_Muncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Corona_Data_Muncher.entitlements; sourceTree = "<group>"; };
-		266E56D9248AB8DD00E239D8 /* Cases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cases.swift; sourceTree = "<group>"; };
-		266E56DB248AB8F900E239D8 /* Deaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deaths.swift; sourceTree = "<group>"; };
 		266E56DD248AC20400E239D8 /* CWISO8601DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWISO8601DateFormatter.swift; sourceTree = "<group>"; };
-		266E56DF248AFD5100E239D8 /* PHEDataDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHEDataDownloader.swift; sourceTree = "<group>"; };
 		266E56E1248B021800E239D8 /* JSONDecoderExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderExtensions.swift; sourceTree = "<group>"; };
 		266E56EA248B06C200E239D8 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		266E56EC248B080700E239D8 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		26757EF1248F0317006F72B7 /* BarGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraphView.swift; sourceTree = "<group>"; };
+		2678FBF724E4A88100341565 /* GovUKDataDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GovUKDataDownloader.swift; sourceTree = "<group>"; };
+		2678FBF924E4AD1F00341565 /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
 		268A2905248C703500E51EFC /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		26B0324F248DA56F00B8E965 /* DeathsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathsViewController.swift; sourceTree = "<group>"; };
+		26B721A524E603C900DE1C51 /* GovUKData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GovUKData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +89,7 @@
 		266E56D8248AB7F300E239D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				266E56D9248AB8DD00E239D8 /* Cases.swift */,
-				266E56DB248AB8F900E239D8 /* Deaths.swift */,
+				26B721A524E603C900DE1C51 /* GovUKData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -99,8 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				266E56DD248AC20400E239D8 /* CWISO8601DateFormatter.swift */,
-				266E56DF248AFD5100E239D8 /* PHEDataDownloader.swift */,
 				266E56EC248B080700E239D8 /* DataController.swift */,
+				2678FBF724E4A88100341565 /* GovUKDataDownloader.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -109,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				266E56E1248B021800E239D8 /* JSONDecoderExtensions.swift */,
+				2678FBF924E4AD1F00341565 /* URLExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -168,7 +168,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Colin Wilson";
 				TargetAttributes = {
 					266E56C4248AB45D00E239D8 = {
@@ -212,17 +212,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				266E56EB248B06C200E239D8 /* Notifications.swift in Sources */,
-				266E56E0248AFD5100E239D8 /* PHEDataDownloader.swift in Sources */,
 				266E56DE248AC20400E239D8 /* CWISO8601DateFormatter.swift in Sources */,
 				26757EF2248F0317006F72B7 /* BarGraphView.swift in Sources */,
-				266E56DC248AB8F900E239D8 /* Deaths.swift in Sources */,
 				266E56ED248B080700E239D8 /* DataController.swift in Sources */,
 				268A2906248C703500E51EFC /* HeaderView.swift in Sources */,
+				2678FBFA24E4AD1F00341565 /* URLExtensions.swift in Sources */,
 				26B03250248DA56F00B8E965 /* DeathsViewController.swift in Sources */,
-				266E56DA248AB8DD00E239D8 /* Cases.swift in Sources */,
 				266E56CB248AB45E00E239D8 /* MainViewController.swift in Sources */,
 				266E56E2248B021800E239D8 /* JSONDecoderExtensions.swift in Sources */,
 				266E56C9248AB45E00E239D8 /* AppDelegate.swift in Sources */,
+				26B721A624E603C900DE1C51 /* GovUKData.swift in Sources */,
+				2678FBF824E4A88100341565 /* GovUKDataDownloader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +266,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -326,6 +327,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

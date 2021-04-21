@@ -12,8 +12,14 @@ class Main1ViewController: UIViewController, MainViewProtocol {
 
     @IBOutlet weak var dateLabel: UILabel!
     
+    var deathsViewController: DeathsTabViewController?
+    var casesViewController: CasesTabViewController?
+    var statusMessage = "Loading..."
+            
     var dataController: DataController? {
         didSet {
+            deathsViewController?.dataController = dataController
+            casesViewController?.dataController = dataController
             update()
         }
     }
@@ -21,15 +27,34 @@ class Main1ViewController: UIViewController, MainViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        initLabels()
+        
+        let _ = DataControllerChangeNotify.observe { dataController in
+            self.dataController = dataController
+        }
+        
+        let _ = DataControllerClearedNotify.observe {
+            self.dataController = nil
+        }
+        
+        let _ = StatusBarNotify.observe { message in
+            self.statusMessage = message
+            self.initLabels()
+        }
+        
         if let delegate = UIApplication.shared.delegate as? AppDelegate {
             delegate.mainViewController = self
         }
         
-        initLabels()
+
     }
     
     private func initLabels () {
-        dateLabel.text = "Loading..."
+        dateLabel.text = statusMessage
+    }
+    
+    override func viewDidLayoutSubviews() {
+        update()
     }
     
     private func update () {
@@ -39,7 +64,9 @@ class Main1ViewController: UIViewController, MainViewProtocol {
             return
         }
         
-        dateLabel.text = DateFormatter.localizedString(from: dataController.deaths.metadata.lastUpdatedAt, dateStyle: .full, timeStyle: UIApplication.shared.isLandscape ? .full : .long)
+        if let dataInfo = dataController.data.getData(0) {
+            dateLabel.text = DateFormatter.localizedString(from: dataInfo.date, dateStyle: .full, timeStyle: .none)
+        }
         
     }
 

@@ -9,11 +9,14 @@
 import Foundation
 
 class DataController {
-    let deaths: Deaths
-    let cases: Cases
+    let data: GovUKData
+    let regionCode: String?
+    let regionalData: GovUKData?
     
-    init (deaths: Deaths, cases: Cases) {
-        self.deaths = deaths
-        self.cases = cases
+    
+    init (data: GovUKData, regionCode: String?, regionalData: GovUKData?) {
+        self.data = data
+        self.regionalData = regionalData
+        self.regionCode = regionCode
     }
 }

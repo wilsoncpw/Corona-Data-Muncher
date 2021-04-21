@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol MainViewProtocol: AnyObject {
+    var dataController: DataController? { get set }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    let locationFinder = LocationFinder ()
 
     var mainViewController: MainViewProtocol? {
         didSet {
@@ -37,18 +43,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func loadData () {
-        let downloader = PHEDataDownloader ()
-        downloader.loadDataIntoController { result in
-            DispatchQueue.main.async {
-                switch result {
-                case .failure(let error) : StatusBarNotify (message: error.localizedDescription).post()
-                case .success(let dataController) :
-                    self.mainViewController?.dataController = dataController
+        
+        
+        locationFinder.lookup { result in
+            
+            var postcodeResult: PostcodeResult?
+            switch result {
+            case .failure(let e): print (e.localizedDescription)
+            case .success(let data): postcodeResult = data
+            }
+            
+            let downloader = GovUKDataDownloader ()
+            downloader.loadDataIntoController(regionCode: postcodeResult?.codes.admin_district) { result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case .failure(let error) : StatusBarNotify (message: error.localizedDescription).post()
+                    case .success(let dataController) :
+                        self.mainViewController?.dataController = dataController
+                    }
                 }
             }
+            
         }
     }
-
 
 }
 

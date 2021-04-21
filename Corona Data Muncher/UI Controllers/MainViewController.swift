@@ -26,9 +26,18 @@ class MainViewController: NSViewController {
                 return
             }
             
-            dateLabel.stringValue = DateFormatter.localizedString(from: data.deaths.metadata.lastUpdatedAt, dateStyle: .full, timeStyle: .full)
-            deathsLabel.stringValue = "\(data.deaths.overview [0].dailyChangeInDeaths!) new deaths"
-            casesLabel.stringValue = "\(data.cases.dailyRecords.dailyLabConfirmedCases) new cases"
+            
+            if let dataInfo = data.data.getData(0) {
+                dateLabel.stringValue = DateFormatter.localizedString(from: dataInfo.date, dateStyle: .full, timeStyle: .full)
+                deathsLabel.stringValue = "\(dataInfo.deaths.daily ?? 0) new deaths"
+                casesLabel.stringValue = "\(dataInfo.cases.daily ?? 0) new cases"
+            } else {
+                dateLabel.stringValue = ""
+                deathsLabel.stringValue = ""
+                casesLabel.stringValue = ""
+            }
+            
+            
             deathsViewController?.dataController = dataController
         }
     }

@@ -7,42 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		260FCA992522A47A00C0AD69 /* LocationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FCA982522A47A00C0AD69 /* LocationFinder.swift */; };
+		260FCA9F2522C65D00C0AD69 /* PostcodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260FCA9E2522C65D00C0AD69 /* PostcodeData.swift */; };
 		267E5DCC2498E770008E996A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267E5DCB2498E770008E996A /* AppDelegate.swift */; };
 		267E5DCE2498E770008E996A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267E5DCD2498E770008E996A /* SceneDelegate.swift */; };
-		267E5DD02498E770008E996A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267E5DCF2498E770008E996A /* ViewController.swift */; };
-		267E5DD32498E770008E996A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 267E5DD12498E770008E996A /* Main.storyboard */; };
 		267E5DD52498E771008E996A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267E5DD42498E771008E996A /* Assets.xcassets */; };
 		267E5DD82498E771008E996A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 267E5DD62498E771008E996A /* LaunchScreen.storyboard */; };
-		268C6BD5249A204F00265F02 /* Cases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C6BD3249A204F00265F02 /* Cases.swift */; };
-		268C6BD6249A204F00265F02 /* Deaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C6BD4249A204F00265F02 /* Deaths.swift */; };
 		268C6BD8249A209600265F02 /* JSONDecoderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C6BD7249A209600265F02 /* JSONDecoderExtensions.swift */; };
 		268C6BDA249A20D000265F02 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C6BD9249A20D000265F02 /* Notifications.swift */; };
-		268C6BDE249A20F600265F02 /* PHEDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C6BDB249A20F600265F02 /* PHEDataDownloader.swift */; };
 		268C6BDF249A20F600265F02 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C6BDC249A20F600265F02 /* DataController.swift */; };
 		268C6BE0249A20F600265F02 /* CWISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C6BDD249A20F600265F02 /* CWISO8601DateFormatter.swift */; };
 		268C6BE2249A234C00265F02 /* Main1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C6BE1249A234C00265F02 /* Main1ViewController.swift */; };
 		268C6BE4249A26B000265F02 /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C6BE3249A26B000265F02 /* UIApplicationExtensions.swift */; };
+		268C6BE6249A5AC300265F02 /* DeathsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C6BE5249A5AC300265F02 /* DeathsTabViewController.swift */; };
+		2697B2D3252C88F600FB5FBB /* CasesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2697B2D2252C88F600FB5FBB /* CasesTableViewCell.swift */; };
+		26B721A824E60AA300DE1C51 /* GovUKData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B721A724E60AA300DE1C51 /* GovUKData.swift */; };
+		26B721AA24E60ACF00DE1C51 /* GovUKDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B721A924E60ACF00DE1C51 /* GovUKDataDownloader.swift */; };
+		26B721AC24E6121B00DE1C51 /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B721AB24E6121B00DE1C51 /* URLExtensions.swift */; };
+		26ED39BA249C23C4005DAC86 /* CasesTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ED39B9249C23C4005DAC86 /* CasesTabViewController.swift */; };
+		26ED39BC249C24C2005DAC86 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ED39BB249C24C2005DAC86 /* ArrayExtensions.swift */; };
+		26ED39BE249C2587005DAC86 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ED39BD249C2587005DAC86 /* UIViewControllerExtensions.swift */; };
 		26FCA8512499896000C12FDE /* Main1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26FCA8502499896000C12FDE /* Main1.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		260FCA982522A47A00C0AD69 /* LocationFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFinder.swift; sourceTree = "<group>"; };
+		260FCA9E2522C65D00C0AD69 /* PostcodeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcodeData.swift; sourceTree = "<group>"; };
 		267E5DC82498E770008E996A /* Corona Data Muncher iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Corona Data Muncher iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		267E5DCB2498E770008E996A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		267E5DCD2498E770008E996A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		267E5DCF2498E770008E996A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		267E5DD22498E770008E996A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		267E5DD42498E771008E996A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		267E5DD72498E771008E996A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		267E5DD92498E771008E996A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		268C6BD3249A204F00265F02 /* Cases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cases.swift; path = "Corona Data Muncher/Model/Cases.swift"; sourceTree = SOURCE_ROOT; };
-		268C6BD4249A204F00265F02 /* Deaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Deaths.swift; path = "Corona Data Muncher/Model/Deaths.swift"; sourceTree = SOURCE_ROOT; };
 		268C6BD7249A209600265F02 /* JSONDecoderExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONDecoderExtensions.swift; path = "Corona Data Muncher/Extensions/JSONDecoderExtensions.swift"; sourceTree = SOURCE_ROOT; };
 		268C6BD9249A20D000265F02 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = "Corona Data Muncher/UI Controllers/Notifications.swift"; sourceTree = SOURCE_ROOT; };
-		268C6BDB249A20F600265F02 /* PHEDataDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PHEDataDownloader.swift; path = "Corona Data Muncher/Model Controllers/PHEDataDownloader.swift"; sourceTree = SOURCE_ROOT; };
 		268C6BDC249A20F600265F02 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataController.swift; path = "Corona Data Muncher/Model Controllers/DataController.swift"; sourceTree = SOURCE_ROOT; };
 		268C6BDD249A20F600265F02 /* CWISO8601DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CWISO8601DateFormatter.swift; path = "Corona Data Muncher/Model Controllers/CWISO8601DateFormatter.swift"; sourceTree = SOURCE_ROOT; };
 		268C6BE1249A234C00265F02 /* Main1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main1ViewController.swift; sourceTree = "<group>"; };
 		268C6BE3249A26B000265F02 /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
+		268C6BE5249A5AC300265F02 /* DeathsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathsTabViewController.swift; sourceTree = "<group>"; };
+		2697B2D2252C88F600FB5FBB /* CasesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasesTableViewCell.swift; sourceTree = "<group>"; };
+		26B721A724E60AA300DE1C51 /* GovUKData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GovUKData.swift; path = "Corona Data Muncher/Model/GovUKData.swift"; sourceTree = SOURCE_ROOT; };
+		26B721A924E60ACF00DE1C51 /* GovUKDataDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GovUKDataDownloader.swift; path = "Corona Data Muncher/Model Controllers/GovUKDataDownloader.swift"; sourceTree = SOURCE_ROOT; };
+		26B721AB24E6121B00DE1C51 /* URLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLExtensions.swift; path = "Corona Data Muncher/Extensions/URLExtensions.swift"; sourceTree = SOURCE_ROOT; };
+		26ED39B9249C23C4005DAC86 /* CasesTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasesTabViewController.swift; sourceTree = "<group>"; };
+		26ED39BB249C24C2005DAC86 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
+		26ED39BD249C2587005DAC86 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		26FCA8502499896000C12FDE /* Main1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main1.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,7 +101,6 @@
 		268C6BCB249A1E3E00265F02 /* UI Elements */ = {
 			isa = PBXGroup;
 			children = (
-				267E5DD12498E770008E996A /* Main.storyboard */,
 				26FCA8502499896000C12FDE /* Main1.storyboard */,
 				267E5DD62498E771008E996A /* LaunchScreen.storyboard */,
 				267E5DD42498E771008E996A /* Assets.xcassets */,
@@ -102,8 +111,11 @@
 		26C6CC12249A1912007D996C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				26B721AB24E6121B00DE1C51 /* URLExtensions.swift */,
 				268C6BD7249A209600265F02 /* JSONDecoderExtensions.swift */,
 				268C6BE3249A26B000265F02 /* UIApplicationExtensions.swift */,
+				26ED39BB249C24C2005DAC86 /* ArrayExtensions.swift */,
+				26ED39BD249C2587005DAC86 /* UIViewControllerExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -111,8 +123,8 @@
 		26C6CC14249A192C007D996C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				268C6BD3249A204F00265F02 /* Cases.swift */,
-				268C6BD4249A204F00265F02 /* Deaths.swift */,
+				26B721A724E60AA300DE1C51 /* GovUKData.swift */,
+				260FCA9E2522C65D00C0AD69 /* PostcodeData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,9 +132,10 @@
 		26C6CC17249A194A007D996C /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				26B721A924E60ACF00DE1C51 /* GovUKDataDownloader.swift */,
 				268C6BDD249A20F600265F02 /* CWISO8601DateFormatter.swift */,
 				268C6BDC249A20F600265F02 /* DataController.swift */,
-				268C6BDB249A20F600265F02 /* PHEDataDownloader.swift */,
+				260FCA982522A47A00C0AD69 /* LocationFinder.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -131,8 +144,10 @@
 			isa = PBXGroup;
 			children = (
 				268C6BD9249A20D000265F02 /* Notifications.swift */,
-				267E5DCF2498E770008E996A /* ViewController.swift */,
 				268C6BE1249A234C00265F02 /* Main1ViewController.swift */,
+				268C6BE5249A5AC300265F02 /* DeathsTabViewController.swift */,
+				26ED39B9249C23C4005DAC86 /* CasesTabViewController.swift */,
+				2697B2D2252C88F600FB5FBB /* CasesTableViewCell.swift */,
 			);
 			path = "UI Controllers";
 			sourceTree = "<group>";
@@ -164,7 +179,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Colin Wilson";
 				TargetAttributes = {
 					267E5DC72498E770008E996A = {
@@ -198,7 +213,6 @@
 				267E5DD82498E771008E996A /* LaunchScreen.storyboard in Resources */,
 				26FCA8512499896000C12FDE /* Main1.storyboard in Resources */,
 				267E5DD52498E771008E996A /* Assets.xcassets in Resources */,
-				267E5DD32498E770008E996A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,32 +223,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				268C6BDE249A20F600265F02 /* PHEDataDownloader.swift in Sources */,
+				26ED39BE249C2587005DAC86 /* UIViewControllerExtensions.swift in Sources */,
+				26B721AC24E6121B00DE1C51 /* URLExtensions.swift in Sources */,
+				268C6BE6249A5AC300265F02 /* DeathsTabViewController.swift in Sources */,
+				26ED39BC249C24C2005DAC86 /* ArrayExtensions.swift in Sources */,
+				26B721AA24E60ACF00DE1C51 /* GovUKDataDownloader.swift in Sources */,
 				268C6BDA249A20D000265F02 /* Notifications.swift in Sources */,
-				267E5DD02498E770008E996A /* ViewController.swift in Sources */,
-				268C6BD6249A204F00265F02 /* Deaths.swift in Sources */,
 				268C6BE2249A234C00265F02 /* Main1ViewController.swift in Sources */,
 				268C6BDF249A20F600265F02 /* DataController.swift in Sources */,
 				268C6BE4249A26B000265F02 /* UIApplicationExtensions.swift in Sources */,
 				268C6BE0249A20F600265F02 /* CWISO8601DateFormatter.swift in Sources */,
 				268C6BD8249A209600265F02 /* JSONDecoderExtensions.swift in Sources */,
-				268C6BD5249A204F00265F02 /* Cases.swift in Sources */,
 				267E5DCC2498E770008E996A /* AppDelegate.swift in Sources */,
+				260FCA992522A47A00C0AD69 /* LocationFinder.swift in Sources */,
+				260FCA9F2522C65D00C0AD69 /* PostcodeData.swift in Sources */,
+				26ED39BA249C23C4005DAC86 /* CasesTabViewController.swift in Sources */,
+				26B721A824E60AA300DE1C51 /* GovUKData.swift in Sources */,
 				267E5DCE2498E770008E996A /* SceneDelegate.swift in Sources */,
+				2697B2D3252C88F600FB5FBB /* CasesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		267E5DD12498E770008E996A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				267E5DD22498E770008E996A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		267E5DD62498E771008E996A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -272,6 +284,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -332,6 +345,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -367,6 +381,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3R8CQY2XDV;
 				INFOPLIST_FILE = "Corona Data Muncher iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -385,6 +400,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3R8CQY2XDV;
 				INFOPLIST_FILE = "Corona Data Muncher iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -44,3 +44,18 @@ struct StatusBarNotify: DeviceNotifiable {
     }
 }
 
+struct DataControllerChangeNotify: DeviceNotifiable {
+    static let name = Notification.Name ("dataControllerChangeNotify")
+    typealias T = DataController
+    let payload: T
+    init (dataController: DataController) {
+        payload = dataController
+    }
+}
+
+struct DataControllerClearedNotify: DeviceNotifiable {
+    static let name = Notification.Name ("dataControllerClearedNotify")
+    typealias T = Void
+    let payload: T
+    init () {}
+}

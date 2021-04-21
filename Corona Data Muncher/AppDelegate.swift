@@ -14,6 +14,11 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
+    private (set) lazy var downloader = GovUKDataDownloader ()
+    
+    func applicationDidFinishLaunching(_ notification: Notification) {
+    }
+    
     var mainViewController: MainViewController? {
         didSet {
             loadData()
@@ -25,9 +30,31 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func loadData () {
+        
         StatusBarNotify (message: "Loading data...").post()
-        let downloader = PHEDataDownloader ()
-        downloader.loadDataIntoController { result in
+        
+        locationFinder.lookup { result in
+            
+            var postcodeResult: PostcodeResult?
+            switch result {
+            case .failure(let e): print (e.localizedDescription)
+            case .success(let data): postcodeResult = data
+            }
+            
+            let downloader = GovUKDataDownloader ()
+            downloader.loadDataIntoController(regionCode: postcodeResult?.codes.admin_district) { result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case .failure(let error) : StatusBarNotify (message: error.localizedDescription).post()
+                    case .success(let dataController) :
+                        self.mainViewController?.dataController = dataController
+                    }
+                }
+            }
+            
+        }
+        
+        downloader.loadDataIntoController(regionCode: <#String?#>) { result in
             DispatchQueue.main.async {
                 switch result {
                 case .failure(let error) : StatusBarNotify (message: error.localizedDescription).post()
