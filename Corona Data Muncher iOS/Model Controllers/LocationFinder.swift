@@ -12,32 +12,50 @@ import CoreLocation
 enum LocationFinderError: LocalizedError {
     
     case cantGetLocation
+    case denied
+    case restricted
+    case cantGetPostcode
     
     var errorDescription: String? {
         switch self {
         case .cantGetLocation: return "Can't get location"
+        case .denied: return "Location services denied by user"
+        case .restricted: return "Location services not available to this app"
+        case .cantGetPostcode: return "Can't get local authority from location"
         }
         
     }
 }
 
+typealias LocationFinderCallback = ((Result<PostcodeResult, Error>)->Void)
 
+//===========================================================================
+/// Overrides CLLocationManager with additional 'calback' value
+///
+///
+class MyLocationManager: CLLocationManager {
+    let callback: LocationFinderCallback
+    
+    init (callback: @escaping LocationFinderCallback) {
+        self.callback = callback
+    }
+}
+
+
+//===========================================================================
+/// Location Finder class to retrieve a PostcodeResult structure from a postcode, coordinates or the current location
 class LocationFinder: NSObject, CLLocationManagerDelegate {
     
     private var latitude: CLLocationDegrees?
     private var longitude: CLLocationDegrees?
     private var postcode: String?
-    private var callback: ((Result<PostcodeResult, Error>)->Void)?
-    var locationManager: CLLocationManager!
+    var locationManager: MyLocationManager?
     
+//--------------------------------------------------------------------------
+// Initialisers...
     
     override init () {
         super.init()
-        
-    }
-    
-    deinit {
-        print ("deinit")
     }
     
     init (latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
@@ -45,7 +63,14 @@ class LocationFinder: NSObject, CLLocationManagerDelegate {
         self.latitude = latitude
     }
     
-    func lookup (callback: @escaping (Result<PostcodeResult, Error>)->Void) {
+    init (postcode: String) {
+        self.postcode = postcode
+    }
+    
+    //-------------------------------------------------------------------
+    /// Lookup the PostcodeResult asynchronously, and call the callback when done.
+    /// - Parameter callback: The callback to return the PostcodeResult or error
+    func lookup (callback: @escaping LocationFinderCallback) {
         
         if let postcode = postcode {
             lookupFromPostcode(postcode: postcode, callback: callback)
@@ -58,43 +83,28 @@ class LocationFinder: NSObject, CLLocationManagerDelegate {
         }
     }
     
-    private func lookupFromCurrentLocation (callback: @escaping (Result<PostcodeResult, Error>)->Void) {
-        self.callback = nil
-        self.locationManager = nil
-        
-        do {
-            
-            switch CLLocationManager.authorizationStatus() {
-            case .authorizedAlways, .authorizedWhenInUse:
-                locationManager = CLLocationManager ()
-                locationManager.delegate = self
-                locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
-                locationManager.requestLocation()
-                self.callback = callback
-//                guard let location = CLLocationManager ().location else {
-//                    throw LocationFinderError.cantGetLocation
-//                }
-//                lookupFromCoordinates (latitude: location.coordinate.latitude, longitude: location.coordinate.longitude, callback: callback)
-            case .notDetermined:
-                locationManager = CLLocationManager ()
-                locationManager.delegate = self
-                locationManager.requestWhenInUseAuthorization()
-                self.callback = callback
-                
-            case .denied, .restricted: throw LocationFinderError.cantGetLocation
-            @unknown default:
-                throw LocationFinderError.cantGetLocation
-            }
-        } catch let e {
-            callback (.failure(e))
-        }
-    }
-    
-    private func lookupFromPostcode (postcode: String, callback: @escaping (Result<PostcodeResult, Error>)->Void) {
+    //-------------------------------------------------------------------
+    /// Look up the PostcoreResult from a postcode string
+    ///
+    ///Not implemented
+    ///
+    /// - Parameters:
+    ///   - postcode: The postcode to look up
+    ///   - callback: Callback to return the PostcodeResult or error
+    private func lookupFromPostcode (postcode: String, callback: @escaping LocationFinderCallback) {
         
     }
     
-    private func lookupFromCoordinates (latitude: CLLocationDegrees, longitude: CLLocationDegrees, callback: @escaping (Result<PostcodeResult, Error>)->Void) {
+    //-------------------------------------------------------------------
+    /// Look up the PostcodeResult from longitude & latitude values.
+    ///
+    /// Uses the api.postcodes.io API to obtain the PostcodeResult value
+    ///
+    /// - Parameters:
+    ///   - latitude: The coordinate latitude
+    ///   - longitude: The coordinate longitude
+    ///   - callback: Callback to return the PostcodeResult or error
+    private func lookupFromCoordinates (latitude: CLLocationDegrees, longitude: CLLocationDegrees, callback: @escaping LocationFinderCallback) {
         
         let url: URL = URL (string: "https://api.postcodes.io/postcodes")!
         
@@ -106,7 +116,6 @@ class LocationFinder: NSObject, CLLocationManagerDelegate {
             .appending("lon", value: "\(longitude)")
             .appending("lat", value: "\(latitude)")
             .appending("radius", value: "200")
-  //          .appending("limit", value: "1")
         
         print (queryURL)
         session.dataTask(with: queryURL) {data, response, error in
@@ -120,7 +129,7 @@ class LocationFinder: NSObject, CLLocationManagerDelegate {
                 guard let rv = (postcodeData.result?.min { r1, r2 in
                     r1.distance < r2.distance
                 }) else {
-                    throw LocationFinderError.cantGetLocation
+                    throw LocationFinderError.cantGetPostcode
                 }
                                 
                 callback (.success(rv))
@@ -132,34 +141,60 @@ class LocationFinder: NSObject, CLLocationManagerDelegate {
         }.resume()
     }
     
+    //-------------------------------------------------------------------
+    /// Lookup the PostcodeResult by obtaining the current location from coreLocation services
+    /// - Parameter callback: Callback to return the PostcodeResult or error
+    private func lookupFromCurrentLocation (callback: @escaping LocationFinderCallback) {
+        let locationManager = MyLocationManager (callback: callback)
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+        self.locationManager = locationManager
+            // Hold a reference to the location manager until its delegate functions have finished.
+            // Note that just creating a location manager causes didChangeAuthorization:status to be called on the delegate
+    }
+    
+    //-------------------------------------------------------------------
+    /// Helper function to handle errors in Core Location callbacks
+    /// - Parameters:
+    ///   - manager: The Core Location maneger
+    ///   - error: The error to handle
+    private func locationManagerFailed (_ manager: CLLocationManager, error: Error) {
+        guard let manager = manager as? MyLocationManager else { return }
+        manager.callback (.failure(error))
+        locationManager = nil   // Release our reference to the core location manager.
+    }
+    
+    //====================================================================================
+    // CLLocationManagerDelegate implementaton
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if status != .notDetermined, let callback = self.callback {
-            lookupFromCurrentLocation(callback: callback)
+        
+        // Note that this gets called not only when locationManager.requestWhenInUseAuthorization gets called, but also
+        // when the CLLocationManager object is created
+                
+        switch status {
+        case .authorizedAlways, .authorizedWhenInUse: manager.requestLocation() // Results in didUpdateLocation or didFailWithError
+        case .notDetermined: manager.requestWhenInUseAuthorization()            // Results in another call to this didChangeAuthorization:status
+            
+        case .denied: locationManagerFailed(manager, error: LocationFinderError.denied)
+        case .restricted: locationManagerFailed(manager, error: LocationFinderError.restricted)
+        @unknown default: locationManagerFailed(manager, error: LocationFinderError.cantGetLocation)
         }
     }
     
-    func locationManager(_ manager: CLLocationManager,
-                                  didUpdateLocations locations: [CLLocation]) {
-        guard let callback = self.callback else {
-            return
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let myManager = manager as? MyLocationManager else { return }
+
+        if locations.count > 0 {
+            lookupFromCoordinates(latitude: locations [0].coordinate.latitude, longitude: locations [0].coordinate.longitude, callback: myManager.callback)
+            self.locationManager = nil
+        } else {
+            locationManagerFailed(manager, error: LocationFinderError.cantGetLocation)
         }
-        self.callback = nil
-        
-        guard locations.count > 0, case let location = locations [0] else {
-            callback (.failure(LocationFinderError.cantGetLocation))
-            return
-        }
-        
-        lookupFromCoordinates(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude, callback: callback)
-        
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        guard let callback = self.callback else {
-            return
-        }
-        
-        callback (.failure(LocationFinderError.cantGetLocation))
+        locationManagerFailed(manager, error: error)
     }
     
 }
